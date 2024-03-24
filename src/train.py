@@ -15,7 +15,7 @@ def main():
   print(f'TEST FEATURES {len(test_features)}')
   print(f'TEST LABELS {len(test_labels)}')
   model = keras.Sequential()
-  model.add(keras.layers.Dense(SIZE, input_shape=SIZE, activation='relu'))
+  model.add(keras.layers.Dense(SIZE, input_shape=(SIZE,), activation='relu'))
   model.add(keras.layers.Dense(SIZE // 2, activation='relu'))
   model.add(keras.layers.Dense(SIZE // 4, activation='relu'))
   model.add(keras.layers.Dense(SIZE // 8, activation='relu'))
